@@ -18,6 +18,19 @@
 .env.test.local
 .env.production.local
 
+### react ###
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
