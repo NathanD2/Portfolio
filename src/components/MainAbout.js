@@ -1,10 +1,9 @@
 // import React from 'react'
-import MainContactMe from "./MainContactMe"
 
-const About = () => {
+const MainAbout = () => {
   return (
-    <div className="page-container">
-      <div className="about-text-container">
+    <div className="logo-text-normal main-content-div">
+        <div className="about-text-container">
         <div className="about-text-div bg-orange">
           <h1 className="about-text">
             Hi, I'm Nathan Dong.
@@ -22,10 +21,8 @@ const About = () => {
           
         </div>
       </div>
-
-      <MainContactMe />
     </div>
   )
 }
 
-export default About
+export default MainAbout
