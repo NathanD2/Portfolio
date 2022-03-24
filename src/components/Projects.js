@@ -16,7 +16,7 @@ const Projects = ({ projects }) => {
 
   // var scroll    = Scroll.animateScroll;
   return (
-    <div className="logo-text-normal content-title project-list-container" >
+    <div className="logo-text-normal content-title  page-container" >
       
         <h1 className="content-title" >Projects</h1>
         <div className="projects" >

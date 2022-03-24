@@ -3,9 +3,11 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 
 import Header from "./components/Header"
 import HomeGraphic from "./components/HomeGraphic"
-import ProjectHighlights from "./components/ProjectHighlights"
+import MainProjects from "./components/MainProjects"
 import Projects from "./components/Projects"
 import About from "./components/About"
+import MainAbout from "./components/MainAbout"
+import MainContactMe from "./components/MainContactMe"
 
 function App() {
 
@@ -119,12 +121,11 @@ function App() {
             <Route path="/" element={
               <>
               <HomeGraphic />
-                <div className="content" id="projects">
+                <div className="content">
                   
-                  {hightlightProjects.length > 0 ? <ProjectHighlights projects={hightlightProjects} /> : 'No projects to show'}
-                  <Link to="/projects" className='center-horizon link-no-decoration'>
-                    <h1 className="logo-text-bold content-title click-me-color more-projects" >{"See my other Projects"}</h1>
-                  </Link>
+                  {hightlightProjects.length > 0 ? <MainProjects projects={hightlightProjects} /> : 'No projects to show'}
+                  <MainAbout />
+                  <MainContactMe />
                 </div>
               </>
             } />
