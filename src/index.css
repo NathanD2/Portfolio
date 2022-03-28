@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-@import url("https://fonts.googleapis.comcss2?family=Nunito:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
 }
@@ -20,7 +20,7 @@ body {
 }
 
 .bg-orange {
-  background-color: orange;
+  background-color: #377fdd;
   color: white;
 }
 
@@ -48,11 +48,11 @@ body {
 }
 
 header {
-  background-color: #F4F4F480;
+  background-color: #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 50px;
+  height: 45px;
   color: #3F444A;
   text-decoration: none;
   position: fixed;
@@ -123,6 +123,7 @@ header ul {
           flex: 2;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  font-family: "Nunito", sans-serif;
 }
 
 header ul li {
@@ -132,8 +133,8 @@ header ul li {
 }
 
 header ul li h3 {
-  font-weight: 300;
-  font-size: 1.3rem;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 header ul a:visited {
@@ -158,10 +159,11 @@ header:last-child > span {
 
 .main-graphic-img {
   z-index: 10;
-  background-image: url("./assets/van-light.jpg");
   background-position-x: 50%;
   background-position-y: 40%;
   background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: fixed;
   width: 100%;
   height: 550px;
@@ -180,16 +182,20 @@ header:last-child > span {
   z-index: 15;
   color: white;
   position: fixed;
-  top: 20%;
+  top: 95px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  width: 100vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-left: 5rem;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .info-icon {
@@ -214,6 +220,9 @@ header:last-child > span {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-bottom: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 40px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -250,7 +259,7 @@ header:last-child > span {
   z-index: 15;
   position: relative;
   top: 550px;
-  background-color: #F4F4F4;
+  background-color: #FFFFFF;
   width: 100%;
 }
 
@@ -260,8 +269,8 @@ header:last-child > span {
 }
 
 .main-content-div {
-  min-height: calc(100vh - 50px);
-  margin-top: 50px;
+  min-height: calc(100vh - 45px);
+  margin-top: 45px;
   background-position-x: 50%;
   background-position-y: 40%;
   background-size: cover;
@@ -291,9 +300,27 @@ header:last-child > span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin: 2rem;
-  width: 30rem;
-  margin-top: 50px;
+  max-width: 30rem;
+  margin-top: 45px;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 60vh;
+  cursor: pointer;
+}
+
+.project-container:hover {
+  -webkit-box-shadow: 0px 0px 10px #aaaaaa;
+          box-shadow: 0px 0px 10px #aaaaaa;
+}
+
+@media only screen and (min-width: 2100px) {
+  .project-container {
+    max-width: 30vw;
+  }
 }
 
 .project-item-title {
@@ -304,9 +331,9 @@ header:last-child > span {
 .project-img {
   margin-top: auto;
   margin-bottom: auto;
-  height: 35vh;
+  max-height: 35vh;
   width: 100%;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 8px 8px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -321,6 +348,9 @@ header:last-child > span {
           flex-direction: column;
   margin-top: auto;
   margin-bottom: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 300px;
 }
 
 .project-tags {
@@ -404,7 +434,7 @@ header:last-child > span {
   -webkit-box-shadow: 0px 0px 10px #aaaaaa;
           box-shadow: 0px 0px 10px #aaaaaa;
   border-radius: 10px;
-  background-color: #F4F4F4;
+  background-color: #FFFFFF;
 }
 
 .form-group {
@@ -445,8 +475,8 @@ header:last-child > span {
 
 .about-text-div {
   width: 100%;
-  min-height: calc(100vh - 50px * 2);
-  padding-bottom: 50px;
+  min-height: calc(100vh - 45px * 2);
+  padding-bottom: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -466,6 +496,6 @@ header:last-child > span {
 }
 
 .page-container {
-  margin-top: 50px;
+  margin-top: 45px;
 }
 /*# sourceMappingURL=index.css.map */
