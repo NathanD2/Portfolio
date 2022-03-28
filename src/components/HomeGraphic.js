@@ -3,6 +3,9 @@ import { TiLocation } from 'react-icons/ti'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 
+import mainGraphic from '../assets/content-bg.jpg';
+// import mainGraphic from '../assets/van-light.jpg';
+
 
 const HomeGraphic = () => {
   return (
@@ -33,6 +36,8 @@ const HomeGraphic = () => {
             </a>
           </div>
         </div>
+        
+      <img src={mainGraphic} className="main-graphic-img "/>
     </div>
   )
 }
