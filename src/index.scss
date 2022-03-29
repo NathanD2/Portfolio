@@ -22,7 +22,8 @@ $header-link-font-weight: 600;
 $header-link-font-style: 'Nunito', sans-serif;
 
 $content-title-font-size: 3rem;
-$main-graphic-height: 550px;
+// $main-graphic-height: 550px;
+$main-graphic-height: calc(90vh - #{$header-height});
 
 * {
   margin: 0;
