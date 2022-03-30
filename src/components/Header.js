@@ -1,6 +1,8 @@
 // import React from 'react'
 // import { Link } from "react-router-dom"
 // import { Link, animateScroll as scroll } from "react-scroll";
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 import pdf from '../assets/Nathan_Dong_Resume.pdf'
 
 

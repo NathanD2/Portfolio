@@ -1,11 +1,12 @@
 // import React from 'react'
 import Tag from "./Tag"
+import { images } from "../Images";
 
 const Project = ({ projectImageName, title, tags, desc }) => {
-    console.log("../assets/" + projectImageName)
+    // console.log("../assets/" + projectImageName)
   return (
     <div className="project-container">
-    <img src={projectImageName} alt="project-img" className="project-img" />
+    {projectImageName !== undefined ? <img src={images[projectImageName]} alt="project-img" className="project-img" /> : <img src={images['default.jpg']} alt="project-img" className="project-img" />}
         <div className="project-desc-container">
             <h1 className="project-item-title">{title}</h1>
             <div className="project-tags">

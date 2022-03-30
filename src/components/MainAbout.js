@@ -4,7 +4,7 @@ const MainAbout = () => {
   return (
     <div className="logo-text-normal main-content-div">
         <div className="about-text-container">
-        <div className="about-text-div bg-orange">
+        <div className="about-text-div bg-blue">
           <h1 className="about-text">
             Hi, I'm Nathan Dong.
             <br />

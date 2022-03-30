@@ -19,8 +19,13 @@ body {
   text-align: center;
 }
 
-.bg-orange {
+.bg-blue {
   background-color: #377fdd;
+  color: white;
+}
+
+.bg-orange {
+  background-color: #ffca75;
   color: white;
 }
 
@@ -238,9 +243,6 @@ header:last-child > span {
     margin-bottom: auto;
     padding-right: 1rem;
   }
-  .main-graphic-text-container {
-    padding-left: 1rem;
-  }
 }
 
 .main-graphic-text-item-container a, .main-graphic-text-item-container a:visited, .main-graphic-text-item-container a:focus, .main-graphic-text-item-container a:active {
@@ -270,8 +272,7 @@ header:last-child > span {
 }
 
 .main-content-div {
-  min-height: calc(100vh - 45px);
-  margin-top: 45px;
+  min-height: calc(100vh - 45px + 5px);
   background-position-x: 50%;
   background-position-y: 40%;
   background-size: cover;
@@ -333,6 +334,7 @@ header:last-child > span {
   margin-top: auto;
   margin-bottom: auto;
   max-height: 35vh;
+  min-height: 35vh;
   width: 100%;
   border-radius: 8px 8px 0px 0px;
   -o-object-fit: cover;
@@ -476,8 +478,7 @@ header:last-child > span {
 
 .about-text-div {
   width: 100%;
-  min-height: calc(100vh - 45px * 2);
-  padding-bottom: 45px;
+  min-height: calc(100vh - 45px + 5px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -488,6 +489,7 @@ header:last-child > span {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  height: 100%;
 }
 
 .about-text {

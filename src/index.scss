@@ -24,6 +24,7 @@ $header-link-font-style: 'Nunito', sans-serif;
 $content-title-font-size: 3rem;
 // $main-graphic-height: 550px;
 $main-graphic-height: calc(90vh - #{$header-height});
+$main-content-container-height: calc(100vh - #{$header-height} + 5px);
 
 * {
   margin: 0;
@@ -43,8 +44,14 @@ body {
   text-align: center;
 }
 
-.bg-orange {
+.bg-blue {
   background-color: rgb(55, 127, 221);
+  // background-color: rgb(214, 68, 68);
+  color: white;
+}
+
+.bg-orange {
+  background-color: rgb(255, 202, 117);
   // background-color: rgb(214, 68, 68);
   color: white;
 }
@@ -234,16 +241,9 @@ header {
     margin-bottom: auto;
     padding-right: 1rem;
   }
-  .main-graphic-text-container {
-    padding-left: 1rem;
-  }
+
 }
 
-
-// .main-graphic-text-item-container a, .main-graphic-text-item-container a:visited, .main-graphic-text-item-container a:hover, .main-graphic-text-item-container a:focus, .main-graphic-text-item-container a:hover, .main-graphic-text-item-container a:active{
-//   text-decoration: none;
-//   color: white;
-// }
 
 .main-graphic-text-item-container a {
   &, &:visited, &:focus, &:active {
@@ -278,9 +278,9 @@ header {
 }
 
 .main-content-div {
-  min-height: calc(100vh - #{$header-height});
-  margin-top: $header-height;
-  // padding-top: $header-height;
+  min-height: $main-content-container-height;
+  // margin-top: $header-height;
+  // padding-top: 15px;
   
   // background-image: url("./assets/content-bg.jpg");
   background-position-x: 50%;
@@ -295,9 +295,7 @@ header {
   // height: 550px;
 }
 
-.main-projects-div {
-  // background-color: blue;
-}
+
 
 .projects {
   width: 100%;
@@ -344,6 +342,7 @@ header {
   // height: 300px;
   // width: 400px;
   max-height: 35vh;
+  min-height: 35vh;
   width: 100%;
   border-radius: 8px 8px 0px 0px;
   object-fit: cover;
@@ -512,9 +511,9 @@ header {
 .about-text-div {
   width: 100%;
   
-  min-height: calc(100vh - #{$header-height} * 2);
+  min-height: $main-content-container-height;
   // min-height: 100vh;
-  padding-bottom: $header-height;
+  // padding-bottom: $header-height;
   // bottom: $header-height;
   // text-align: center;
   
@@ -522,7 +521,12 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  height: 100%;
 }
+
+.about-text-container {
+}
+
 .about-text {
   margin: auto;
   border-radius: 10px;

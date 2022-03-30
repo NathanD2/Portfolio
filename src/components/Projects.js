@@ -3,7 +3,12 @@ import Project from "./Project"
 import { Link, animateScroll as scroll, scroller } from "react-scroll";
 import React, { useState, useEffect } from 'react';
 
-const Projects = ({ projects }) => {
+
+import { ProjectData } from '../ProjectData'
+
+const Projects = () => {
+
+  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
     // Update the document title using the browser API
@@ -11,6 +16,8 @@ const Projects = ({ projects }) => {
       duration: 0,
       delay: 0
     });
+
+    setProjects(ProjectData);
   });
 
 
