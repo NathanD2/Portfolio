@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 
+import { Element } from "react-scroll";
+
 import Header from "./components/Header"
 import HomeGraphic from "./components/HomeGraphic"
 import MainProjects from "./components/MainProjects"
 import Projects from "./components/Projects"
 import About from "./components/About"
 import MainAbout from "./components/MainAbout"
+import MainAboutContacts from "./components/MainAboutContacts"
 import MainContactMe from "./components/MainContactMe"
 
 import { HighlightProjectData } from './ProjectData'
@@ -29,9 +32,12 @@ function App() {
               <>
               <HomeGraphic />
                 <div className="content">
+                    {hightlightProjects.length > 0 ? <MainProjects projects={hightlightProjects} /> : 'No projects to show'}
                   
-                  {hightlightProjects.length > 0 ? <MainProjects projects={hightlightProjects} /> : 'No projects to show'}
                   <MainAbout />
+                  <Element name="contact">
+                    <MainAboutContacts />
+                  </Element>
                   <MainContactMe />
                 </div>
               </>

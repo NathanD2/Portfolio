@@ -3,6 +3,9 @@ import { TiLocation } from 'react-icons/ti'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 
+
+import { Link } from "react-scroll";
+
 import mainGraphic from '../assets/content-bg.jpg';
 // import mainGraphic from '../assets/van-light.jpg';
 
@@ -19,21 +22,22 @@ const HomeGraphic = () => {
           </div>
           <div className="main-graphic-text-item-container hover">
             <FaGithub className='info-icon' />
-            <a href="/">
+            <a href="https://github.com/NathanD2">
               <h1 className='info-text'>Github</h1>
             </a>
           </div>
           <div className="main-graphic-text-item-container hover">
             <FaLinkedin className='info-icon' />
-            <a href="/">
+            <a href="https://www.linkedin.com/in/nathandong-dev/">
               <h1 className='info-text'>Linkedin</h1>
             </a>
           </div>
           <div className="main-graphic-text-item-container hover">
             <HiOutlineMail className='info-icon' />
-            <a href="/" >
+            <Link to="contact" spy={true} smooth={true} duration={500}>
               <h1 className='info-text'>Email</h1>
-            </a>
+            </Link>
+           
           </div>
         </div>
         
