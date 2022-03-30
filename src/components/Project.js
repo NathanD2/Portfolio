@@ -1,11 +1,15 @@
-// import React from 'react'
+// import { useState} from 'react'
+
 import Tag from "./Tag"
 import { images } from "../Images";
 
-const Project = ({ projectImageName, title, tags, desc }) => {
-    // console.log("../assets/" + projectImageName)
+const Project = ({ projectImageName, title, tags, desc, openModal }) => {
+
+
   return (
-    <div className="project-container">
+    <div className="project-container" onClick={() => {
+      openModal(0) }}>
+
     {projectImageName !== undefined ? <img src={images[projectImageName]} alt="project-img" className="project-img" /> : <img src={images['default.jpg']} alt="project-img" className="project-img" />}
         <div className="project-desc-container">
             <h1 className="project-item-title">{title}</h1>

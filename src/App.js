@@ -11,6 +11,7 @@ import About from "./components/About"
 import MainAbout from "./components/MainAbout"
 import MainAboutContacts from "./components/MainAboutContacts"
 import MainContactMe from "./components/MainContactMe"
+import ProjectModal from './components/ProjectModal.js';
 
 import { HighlightProjectData } from './ProjectData'
 
@@ -22,6 +23,22 @@ function App() {
     setHightlightProjects(HighlightProjectData);
   })
 
+  const findProjectById = (id) => {
+    const project = hightlightProjects.find(project => project.id === id)
+    return project;
+  }
+
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = (id) => {
+    const projectFound = findProjectById(id);
+    setShowModal(true);
+    console.log("OpenModal id:", id);
+  }
+  const closeModal = () => {
+    setShowModal(false);
+  }
+
   return (
     <Router>
       <div className="App">
@@ -31,8 +48,13 @@ function App() {
             <Route path="/" element={
               <>
               <HomeGraphic />
+
+              <ProjectModal show={showModal} handleClose={closeModal} >
+                <p>Modal</p>
+              </ProjectModal>
+
                 <div className="content">
-                    {hightlightProjects.length > 0 ? <MainProjects projects={hightlightProjects} /> : 'No projects to show'}
+                    {hightlightProjects.length > 0 ? <MainProjects projects={hightlightProjects} openModal={openModal}/> : 'No projects to show'}
                   
                   <MainAbout />
                   <Element name="contact">
