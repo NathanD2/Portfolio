@@ -307,6 +307,7 @@ header {
 
 .project-container {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: space-evenly;
   margin: 2rem;
@@ -316,7 +317,7 @@ header {
   border-radius: 8px;
   // padding: 10px;
   overflow: hidden;
-  height: 60vh;
+  height: 70vh;
   
   cursor: pointer;
   &:hover {
@@ -377,6 +378,34 @@ header {
   margin-right: 5px;
 }
 
+.project-links {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+
+.project-modal-links {
+  display: flex;
+  position: absolute;
+  bottom: 6px;
+  left: 10px;
+}
+
+.link-active {
+  color: $text-light-highlight-2;
+  margin-right: 8px;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link-inactive {
+  color: grey;
+  margin-right: 8px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
 .content-title {
   position: relative;
   // padding-top: 10px;
@@ -389,6 +418,22 @@ header {
 .desc-text {
   font-size: large;
   margin-top: 10px;
+}
+
+.project-desc {
+  height: 47%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-desc-long {
+  min-height: 50vh;
+  // max-height: 64vh;
+  // text-overflow: ellipsis;
+
+  /* Required for text-overflow to do anything */
+  // white-space: nowrap;
+  overflow: hidden;
 }
 
 .more-projects {
@@ -538,4 +583,54 @@ header {
 .page-container {
 
   margin-top: $header-height;
+}
+
+// Project modal css
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 20;
+}
+
+.modal-main {
+  position:fixed;
+  background: white;
+  width:50vw;
+  height: 80vh;
+  top:50%;
+  left:50%;
+  border-radius: 4px;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+}
+
+.modal-close {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .modal-main {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .modal-main {
+    width: 100vw;
+  }
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
 }
