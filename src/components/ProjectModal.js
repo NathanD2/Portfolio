@@ -1,6 +1,7 @@
 // import React from 'react'
 import { images } from "../Images";
 import Tag from "./Tag"
+import { MdClose } from "react-icons/md"
 
 const ProjectModal = ({ show, handleClose, projectImageName, title, tags, links, desc, descLong }) => {
     
@@ -16,9 +17,10 @@ const ProjectModal = ({ show, handleClose, projectImageName, title, tags, links,
           // do not close modal if anything inside modal content is clicked
           e.stopPropagation();
         }}>
-        <button type="button" onClick={handleClose}>
+        {/* <button type="button" className="modal-close" onClick={handleClose}>
           Close
-        </button>
+        </button> */}
+        <MdClose className="modal-close" onClick={handleClose} />
         {/* {projectImageName !== undefined ? <img src={images[projectImageName]} alt="project-img" className="project-img" /> : <img src={images['default.jpg']} alt="project-img" className="project-img" />} */}
         <div className="project-desc-container">
             <h1 className="project-item-title">{title}</h1>

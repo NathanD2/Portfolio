@@ -396,7 +396,6 @@ header:last-child > span {
   position: absolute;
   bottom: 6px;
   left: 10px;
-  cursor: pointer;
 }
 
 .link-active {
@@ -404,12 +403,13 @@ header:last-child > span {
   margin-right: 8px;
   font-size: 15px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .link-inactive {
   color: grey;
   margin-right: 8px;
-  font-size: 10px;
+  font-size: 15px;
   text-decoration: none;
 }
 
@@ -568,6 +568,14 @@ header:last-child > span {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 1;
+}
+
+.modal-close {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
 
 @media only screen and (max-width: 1000px) {
