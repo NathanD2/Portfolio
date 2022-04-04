@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     setHightlightProjects(HighlightProjectData);
-  })
+  }, [])
 
   const findProjectById = (id) => {
     const project = hightlightProjects.find(project => project.id === id)
@@ -30,10 +30,24 @@ function App() {
 
   const [showModal, setShowModal] = useState(false);
 
-  const openModal = (id) => {
-    const projectFound = findProjectById(id);
+  // Modal States
+  const [projectImageName, setProjectImageName] = useState("");
+  const [title, setTitle] = useState("");
+  const [tags, setTags] = useState([]);
+  const [links, setLinks] = useState([]);
+  const [desc, setDesc] = useState("");
+  const [descLong, setDescLong] = useState("");
+
+  const openModal = (projectImageName, title, tags, links, desc, descLong) => {
+    setProjectImageName(projectImageName);
+    setTitle(title);
+    setTags(tags);
+    setLinks(links);
+    setDesc(desc);
+    setDescLong(descLong);
+
     setShowModal(true);
-    console.log("OpenModal id:", id);
+    console.log("Project:", projectImageName, title, tags, links, desc, descLong);
   }
   const closeModal = () => {
     setShowModal(false);
@@ -44,14 +58,15 @@ function App() {
       <div className="App">
         <Header />
         <div className="main-content">
+          <ProjectModal show={showModal} handleClose={closeModal} projectImageName={projectImageName} title={title} tags={tags} links={links} desc={desc} descLong={descLong}>
+            <p>Modal</p>
+          </ProjectModal>
           <Routes>
             <Route path="/" element={
               <>
               <HomeGraphic />
 
-              <ProjectModal show={showModal} handleClose={closeModal} >
-                <p>Modal</p>
-              </ProjectModal>
+              
 
                 <div className="content">
                     {hightlightProjects.length > 0 ? <MainProjects projects={hightlightProjects} openModal={openModal}/> : 'No projects to show'}
@@ -66,7 +81,7 @@ function App() {
             } />
             <Route path='/projects' element={
               <>
-                <Projects />
+                <Projects openModal={openModal}/>
               </>} />
             <Route path='/about' element={
               <>

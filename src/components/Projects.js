@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 
 import { ProjectData } from '../ProjectData'
 
-const Projects = () => {
+const Projects = ( { openModal } ) => {
 
   const [projects, setProjects] = useState([]);
 
@@ -27,7 +27,7 @@ const Projects = () => {
       
         <h1 className="content-title" >Projects</h1>
         <div className="projects" >
-        {projects.map(({ id, projectImageName, projectTitle, tags, desc }) => (<Project key={id} projectImageName={projectImageName} title={projectTitle} tags={tags} desc={desc}/>))}
+        {projects.map(({ id, projectImageName, projectTitle, tags, links, desc, descLong }) => (<Project key={id} projectImageName={projectImageName} title={projectTitle} tags={tags} links={links} desc={desc} descLong={descLong} openModal={openModal}/>))}
         </div > 
     </div>
   )
