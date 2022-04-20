@@ -36,15 +36,10 @@ const HighlightProjectData = [
           name: "Github",
           link: "",
           active: false
-        },
-        {
-          name: "Medium",
-          link: "",
-          active: false
         }
       ],
       desc: "Generated Vancouver Rental price dataset using Craigslist web scrapping, pre-processed/cleaned the dataset and analyzed the dataset. Implemented using Python, NumPy, pandas, Seaborn and matplotlib.",
-      descLong: "Long description"
+      descLong: "Generated Vancouver Rental price dataset using Craigslist web scrapping, pre-processed/cleaned the dataset and analyzed the dataset. Implemented using Python, NumPy, pandas, Seaborn and matplotlib."
     },
     {
       id: 2,
@@ -52,9 +47,9 @@ const HighlightProjectData = [
       projectTitle: "Bank FAM System",
       links: [
         {
-          name: "Github (contact me for access)",
-          link: "",
-          active: false
+          name: "Github",
+          link: "https://github.com/NathanD2/bank_fam_system",
+          active: true
         }
       ],
       tags: [{tag: 'Python', color: 'LemonChiffon'}, {tag: 'Object-Oriented Programming', color: 'lightblue'}],
@@ -101,11 +96,6 @@ const ProjectData = [
         name: "Github",
         link: "",
         active: false
-      },
-      {
-        name: "Medium",
-        link: "",
-        active: false
       }
     ],
     desc: "Generated Vancouver Rental price dataset using Craigslist web scrapping, pre-processed/cleaned the dataset and analyzed the dataset. Implemented using Python, NumPy, pandas, Seaborn and matplotlib.",
@@ -117,9 +107,9 @@ const ProjectData = [
     projectTitle: "Bank FAM System",
     links: [
       {
-        name: "Github (contact me for access)",
-        link: "",
-        active: false
+        name: "Github",
+        link: "https://github.com/NathanD2/bank_fam_system",
+        active: true
       }
     ],
     tags: [{tag: 'Python', color: 'LemonChiffon'}, {tag: 'Object-Oriented Programming', color: 'lightblue'}],
@@ -132,9 +122,9 @@ const ProjectData = [
     projectTitle: "PokeRetriever",
     links: [
       {
-        name: "Github (contact me for access)",
-        link: "",
-        active: false
+        name: "Github",
+        link: "https://github.com/NathanD2/pokeretriever",
+        active: true
       }
     ],
     tags: [{tag: 'Python', color: 'LemonChiffon'}, {tag: 'Object-Oriented Programming', color: 'lightblue'}],
