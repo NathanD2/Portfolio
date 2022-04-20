@@ -303,6 +303,7 @@ header {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  font-family: 'Roboto', sans-serif;
 }
 
 .project-container {
@@ -335,6 +336,7 @@ header {
 .project-item-title {
   margin-top: 10px;
   font-size: 2rem;
+  font-weight: 400;
 }
 
 .project-img {
