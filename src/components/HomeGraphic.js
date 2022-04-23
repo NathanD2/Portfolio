@@ -21,27 +21,27 @@ const HomeGraphic = () => {
             </a>
           </div>
           <div className="main-graphic-text-item-container hover">
+            <a href="https://github.com/NathanD2" className='main-graphic-link'>
             <FaGithub className='info-icon' />
-            <a href="https://github.com/NathanD2">
               <h1 className='info-text'>Github</h1>
             </a>
           </div>
           <div className="main-graphic-text-item-container hover">
+            <a href="https://www.linkedin.com/in/nathandong-dev/" className='main-graphic-link'>
             <FaLinkedin className='info-icon' />
-            <a href="https://www.linkedin.com/in/nathandong-dev/">
               <h1 className='info-text'>Linkedin</h1>
             </a>
           </div>
           <div className="main-graphic-text-item-container hover">
+            <Link to="contact" spy={true} smooth={true} duration={500} className='main-graphic-link'>
             <HiOutlineMail className='info-icon' />
-            <Link to="contact" spy={true} smooth={true} duration={500}>
               <h1 className='info-text'>Email</h1>
             </Link>
            
           </div>
         </div>
         
-      <img src={mainGraphic} className="main-graphic-img "/>
+      <img src={mainGraphic} alt="vancouver" className="main-graphic-img "/>
     </div>
   )
 }

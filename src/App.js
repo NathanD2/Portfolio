@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 import { Element } from "react-scroll";
 
@@ -9,7 +9,6 @@ import MainProjects from "./components/MainProjects"
 import Projects from "./components/Projects"
 import About from "./components/About"
 import MainAbout from "./components/MainAbout"
-import MainAboutContacts from "./components/MainAboutContacts"
 import MainContactMe from "./components/MainContactMe"
 import ProjectModal from './components/ProjectModal.js';
 
@@ -23,10 +22,10 @@ function App() {
     setHightlightProjects(HighlightProjectData);
   }, [])
 
-  const findProjectById = (id) => {
-    const project = hightlightProjects.find(project => project.id === id)
-    return project;
-  }
+  // const findProjectById = (id) => {
+  //   const project = hightlightProjects.find(project => project.id === id)
+  //   return project;
+  // }
 
   const [showModal, setShowModal] = useState(false);
 
@@ -64,18 +63,25 @@ function App() {
           <Routes>
             <Route path="/" element={
               <>
-              <HomeGraphic />
+              <Element name="home" id="home">
+                <HomeGraphic />
+              </Element>
+              
 
               
 
                 <div className="content">
+                  <Element name="projects" id="projects">
                     {hightlightProjects.length > 0 ? <MainProjects projects={hightlightProjects} openModal={openModal}/> : 'No projects to show'}
-                  
-                  <MainAbout />
-                  <Element name="contact">
-                    <MainAboutContacts />
                   </Element>
-                  <MainContactMe />
+                  <Element name="about" id="about">
+                  <MainAbout />
+                    {/* <MainAboutContacts /> */}
+                  </Element>
+                  <Element name="contact" id="contact">
+                    <MainContactMe />
+                  </Element>
+                  
                 </div>
               </>
             } />
