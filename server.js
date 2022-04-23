@@ -28,7 +28,7 @@ app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 app.listen(port, () => {
-  console.log(`Listening (locally) on ${"http://localhost:8080/"}`);
+  console.log(`Listening (locally) on http://localhost:${process.env.PORT || 8080}/`);
 });
 
 const transporter = nodemailer.createTransport({

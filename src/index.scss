@@ -16,6 +16,7 @@ $text-light-main: #3F444A;
 $text-light-main-2: #6c7074;
 $text-light-highlight: #121157;
 $text-light-highlight-2: #38a6c7;
+$text-light-highlight-3: #3ad4a1;
 $header-height: 45px;
 $header-link-font-size: 1.1rem;
 $header-link-font-weight: 600;
@@ -24,7 +25,8 @@ $header-link-font-style: 'Nunito', sans-serif;
 $content-title-font-size: 3rem;
 // $main-graphic-height: 550px;
 $main-graphic-height: calc(90vh - #{$header-height});
-$main-content-container-height: calc(100vh - #{$header-height} + 5px);
+// $main-content-container-height: calc(100vh - #{$header-height} + 5px);
+$main-content-container-height: 100vh;
 
 * {
   margin: 0;
@@ -164,6 +166,10 @@ header {
   }
 }
 
+.header-link {
+  cursor: pointer;
+}
+
 
 .main-graphic-img {
   z-index: 10;
@@ -202,9 +208,16 @@ header {
   display: flex;
   width: 100vw;
   justify-content: space-evenly;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   // padding-left: 5rem;
+}
+
+.main-graphic-link {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
 }
 
 .info-icon {
@@ -410,7 +423,7 @@ header {
 
 .content-title {
   position: relative;
-  // padding-top: 10px;
+  padding-top: $header-height;
   text-align: center;
   font-weight: 200;
   font-size: $content-title-font-size;
@@ -441,6 +454,10 @@ header {
 .more-projects {
   font-size: 3rem;
   margin-top: 30px;
+  text-align: center;
+  font-weight: 200;
+  font-size: $content-title-font-size;
+  font-family: 'Roboto', sans-serif;
 }
 
 // 4k+ screens
@@ -567,19 +584,32 @@ header {
   // background-color: orange;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+
   height: 100%;
 }
 
-.about-text-container {
-}
 
 .about-text {
+  
+  padding-inline: 50px;
   margin: auto;
   border-radius: 10px;
   // align-items:center;
   // justify-content:center;
   color: white;
+}
+
+
+.contact-link {
+  &, &:visited, &:focus {
+    text-decoration: none;
+    color: $text-light-highlight-3;
+    cursor: pointer;
+  }
+  &:hover {
+    text-decoration: underline;
+    // color: $text-light-highlight-2;
+  }
 }
 
 .page-container {

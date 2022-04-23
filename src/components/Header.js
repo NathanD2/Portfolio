@@ -1,12 +1,16 @@
-// import React from 'react'
-// import { Link } from "react-router-dom"
-// import { Link, animateScroll as scroll } from "react-scroll";
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link } from 'react-scroll'
+import { useLocation } from 'react-router-dom'
+import { useState } from 'react'
 
 import pdf from '../assets/Nathan_Dong_Resume.pdf'
 
 
 const Header = () => {
+
+  const location = useLocation().pathname;
+  
+  const [path] = useState(location);
+
   return (
     <div className="header-container">
     <header className='header'>
@@ -16,19 +20,40 @@ const Header = () => {
       </a>
         <ul className="links-list">
           <li>
-            <a href="/" className="header-link">
-              <h3>Home</h3>
-            </a>
+            {
+              path === '/' ?
+              <Link to="home" className="header-link" spy={true} smooth={true} duration={500}>
+                <h3>Home</h3>
+              </Link> :
+              <a href="/" className="header-link">
+                <h3>Home</h3>
+              </a>
+            }
+            
           </li>
           <li>
-            <a href="/projects" className="header-link">
+            {
+              path === '/' ?
+              <Link to="projects" className="header-link" spy={true} smooth={true} duration={500}>
+                <h3>Projects</h3>
+              </Link> :
+              <a href="/#projects" className="header-link">
               <h3>Projects</h3>
             </a>
+            }
+            
           </li>
           <li>
-            <a href="/about" className="header-link">
+          {
+              path === '/' ?
+              <Link to="about" className="header-link" spy={true} smooth={true} duration={500}>
+                <h3 >About</h3>
+              </Link> :
+              <a href="/#about" className="header-link">
               <h3 >About</h3>
             </a>
+          }
+            
           </li>
           <li>
             <a href={pdf} className="header-link">

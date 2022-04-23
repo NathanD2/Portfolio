@@ -162,6 +162,10 @@ header:last-child > span {
   justify-self: flex-start;
 }
 
+.header-link {
+  cursor: pointer;
+}
+
 .main-graphic-img {
   z-index: 10;
   background-position-x: 50%;
@@ -196,12 +200,26 @@ header:last-child > span {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.main-graphic-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  cursor: pointer;
 }
 
 .info-icon {
@@ -272,7 +290,7 @@ header:last-child > span {
 }
 
 .main-content-div {
-  min-height: calc(100vh - 45px + 5px);
+  min-height: 100vh;
   background-position-x: 50%;
   background-position-y: 40%;
   background-size: cover;
@@ -417,6 +435,7 @@ header:last-child > span {
 
 .content-title {
   position: relative;
+  padding-top: 45px;
   text-align: center;
   font-weight: 200;
   font-size: 3rem;
@@ -443,6 +462,10 @@ header:last-child > span {
 .more-projects {
   font-size: 3rem;
   margin-top: 30px;
+  text-align: center;
+  font-weight: 200;
+  font-size: 3rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 @media only screen and (min-width: 2500px) {
@@ -525,7 +548,7 @@ header:last-child > span {
 
 .about-text-div {
   width: 100%;
-  min-height: calc(100vh - 45px + 5px);
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -533,16 +556,24 @@ header:last-child > span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   height: 100%;
 }
 
 .about-text {
+  padding-inline: 50px;
   margin: auto;
   border-radius: 10px;
   color: white;
+}
+
+.contact-link, .contact-link:visited, .contact-link:focus {
+  text-decoration: none;
+  color: #3ad4a1;
+  cursor: pointer;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
 }
 
 .page-container {
