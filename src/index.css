@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
 * {
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -43,7 +45,7 @@ body {
 }
 
 .App {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .header-container {
@@ -231,7 +233,7 @@ header:last-child > span {
 }
 
 .info-text {
-  font-weight: 100;
+  font-weight: 200;
   font-size: 30px;
 }
 
@@ -310,7 +312,6 @@ header:last-child > span {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-family: 'Roboto', sans-serif;
 }
 
 .project-container {
@@ -381,8 +382,6 @@ header:last-child > span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -390,8 +389,12 @@ header:last-child > span {
   margin-top: 5px;
 }
 
+.project-tags:hover {
+  overflow-x: scroll;
+}
+
 .tag-label {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -437,9 +440,8 @@ header:last-child > span {
   position: relative;
   padding-top: 45px;
   text-align: center;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 3rem;
-  font-family: 'Roboto', sans-serif;
 }
 
 .desc-text {
@@ -455,7 +457,6 @@ header:last-child > span {
 
 .project-desc-long {
   min-height: 50vh;
-  /* Required for text-overflow to do anything */
   overflow: hidden;
 }
 
@@ -563,6 +564,7 @@ header:last-child > span {
   padding-inline: 50px;
   margin: auto;
   border-radius: 10px;
+  font-weight: 400;
   color: white;
 }
 
